@@ -1,0 +1,41 @@
+
+
+.card-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    background-color: gray;
+}
+
+
+h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+button:hover{
+    background-color: lightyellow;
+    scale: 1.05;
+}
+
+button {
+    height: 3rem;
+    width: 10rem;
+    border-radius: 20%;
+    border: 2px black solid;  
+    background-color: antiquewhite  
+}
+
+.card-content {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    border: 2px black solid;
+    background-color: beige;
+}
+
