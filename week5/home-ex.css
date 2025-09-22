@@ -70,21 +70,29 @@
     }
 
     .nav-menu {
-        display: flex;
+        display: none;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         background-color: purple;
     }
 
     .nav-toggle:hover {
-        color: bisque;
+        background-color: #EEE8AA;
+    }
+
+    .nav-toggle:hover span {
+        background-color: #CF9FFF;
     }
 
     .nav-menu.show {
-        display: flex;
+        display:flex;
     }
 
     .nav-menu.hide {
         display: none;
+    }
+
+    .shown{
+        display: flex;
     }
 }
