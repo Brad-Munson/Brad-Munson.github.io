@@ -1,0 +1,90 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: purple;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-brand {
+    flex-grow: 1;
+    font-size: 300%;
+    color: gold;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.nav-menu li {
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+
+    flex: 1;
+}
+
+.nav-menu li a {
+    color: gold;
+    font-size: 150%;
+    transition-duration: 0.2s;
+}
+
+.nav-menu li a:hover {
+    color: lightpink;
+
+    transition-duration: 0.2s;
+}
+
+
+/* put hamburger stlying and other mobile like elements (when shrinking the screen)*/
+@media (max-width: 768px) { 
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: gold;
+        height: 80px;
+        width: 80px;
+        border-radius: 2px;
+        padding: 0;
+        margin: 3px;
+    }
+
+    .nav-toggle span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: purple;
+        height: 10px;
+        width: 70px;
+        border-radius: 2px;
+        margin: 3px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: purple;
+    }
+
+    .nav-toggle:hover {
+        color: bisque;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .nav-menu.hide {
+        display: none;
+    }
+}
