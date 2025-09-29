@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home-ex.css">
+    <title>Sigma Alpha Epsilon</title>
+</head>
+<body style="background-color: #EEE8AA;">
+    <nav class="main-nav">
+        <div class="nav-brand">Sigma Alpha Epsilon</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    <ul class="nav-menu">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav>
+
+    <main> <!--This is where I put the main content in my page (like a grid)-->
+
+        <div class="event-grid2">
+            <section class="event4 event">
+                <h2>Philanthropy</h2>
+                <p>True Gentleman Day of Service is SAE’s community service initiative. Use the TG Day of Service branding for any service event you participate in as a group.
+                    <br> Paddy Murphy can be one of the most memorable moments of your chapter’s year and can lead to years of tradition and enjoyment while giving back and making a lasting impact in the lives of others while also stimulating excitement and healthy competition on your campus.
+                    <br>NMDP - For the thousands of people diagnosed every year with life-threatening blood cancers like leukemia and lymphoma, a cure exists.
+                </p>
+            </section>
+
+            <section class="event5 event">
+                <h2>Contacts</h2>
+                <p>Follow us on Instagram: @SAEboulder
+                    <br> President Noah Morris - 949-491-2166
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        const eventFilter4 = document.querySelector('.event4');
+
+        let filter_changed = false;
+
+        function Filter(event) {
+            console.log('triggered');
+            if (event.key == "f") {
+                if (filter_changed == false) {
+                    eventFilter4.style.display = 'block';
+                    filter_changed = true;
+                }
+                else {
+                    eventFilter4.style.display = 'none';
+                    filter_changed = false;
+                }
+            }
+        }
+
+        addEventListener("keydown", (event) => {Filter(event)});
+
+
+    </script>
+
+
+</body>
+</html>
