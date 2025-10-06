@@ -165,11 +165,11 @@
 }
 
 body {
-    font-family:'Verdana', sans-serif;
+    font-family:'Courier', sans-serif;
 }
 
 body.serif-font {
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Verdana', Courier, monospace;
 }
 
 /* put hamburger stlying and other mobile like elements (when shrinking the screen)*/
