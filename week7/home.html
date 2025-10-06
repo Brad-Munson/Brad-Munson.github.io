@@ -8,6 +8,7 @@
 </head>
 <body>
     <button id='theme' type='button'>DARK MODE</button>
+    <button id="fontToggle">Change Font Style</button>
     <nav class="main-nav">
         <div class="nav-brand">Sigma Alpha Epsilon</div>
         <button class="nav-toggle" aria-label="Toggle navigation menu">
@@ -29,7 +30,7 @@
             <section class="event1 event">
                 <h2>Our Vision</h2>
                 <p>Through friendship, scholarship, leadership, and service, SAE finds students with impeccable character and helps them achieve their full potential, letting them rise up to face every challenge placed before them. We achieve through our creed The True Gentlemen. Founded by John Walter Wayland we carry this creed with each and every member and base our actions and morals on these wise words.
-                    <br> <img src="imagesw6/SAEcreed.png" alt="SAE Creast">
+                    <img src="imagesw6/SAEcreed.png" alt="SAE Creast">
                 </p>
             </section>
 
@@ -49,71 +50,17 @@
         </div>
     </main>
     
-    <!--have to do something else than color change, maybe a hide, maybe make text bigger
-    pick two elements one is a keydown and one is a click-->
-    <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const event1 = document.querySelector('.event1');
-        const eventFilter = document.querySelector('.event1');
-        const eventFilter2 = document.querySelector('.event3');
-
-        const btn = document.querySelector('#theme').addEventListener('click', theme);
-        let filter_changed = false;
-        
-
-        function Filter(event) {
-            console.log('triggered');
-            if (event.key == "f") {
-                if (filter_changed == false) {
-                    eventFilter.style.display = 'block';
-                    eventFilter2.style.display = 'block';
-                    filter_changed = true;
-                }
-                else {
-                    eventFilter.style.display = 'none';
-                    eventFilter2.style.display = 'none';
-                    filter_changed = false;
-                }
-            }
-        }
-
-        addEventListener("keydown", (event) => {Filter(event)});
-        
-        function showMenu () {
-            navMenu.classList.toggle("show");
-            navMenu.classList.toggle("hide");
-
-        }
-
-        navToggle.addEventListener('click', showMenu)
-
-        var shown = navMenu.classList.toggle("hide");
-
-
-        function theme() {
-            console.log('theme works');
-            const inTheme = document.body.className;
-            setTheme(inTheme);
-
-        }
-
-        function setTheme(theme) {
-            let inTheme = theme;
-            if (inTheme == 'dark') {
-                theme = 'light';
-            }
-            else {
-                theme = 'dark';
-            }
-            localStorage.setItem('userTheme', theme);
-            document.body.className = theme;
-        }
-
-        window.addEventListener('load', function() {
-            const savedTheme = localStorage.getItem('userTheme') || 'light';
-            document.body.className = savedTheme;
-        });
-    </script>
+    <footer class="main-footer">
+        <div class="text-sizes">
+            <h2>Text size:</h2>
+            <button id="small-text">Small</button>
+            <button id="med-text">Medium</button>
+            <button id="large-text">Large</button>
+            <button id="clear-preferences">Clear Preferences</button>
+        </div>
+    </footer>
+    
+    <script src="myfile.js"></script>
+    
 </body>
 </html>

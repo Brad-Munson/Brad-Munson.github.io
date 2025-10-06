@@ -1,9 +1,10 @@
 .main-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     background-color: purple;
     border: 2px solid black;
-    padding: 20px;
+    margin: 0px;
+    padding: 16px;
 }
 
 .nav-toggle {
@@ -11,15 +12,15 @@
 }
 
 .nav-brand {
-    flex-grow: 1;
-    font-family:'Verdana';
-    font-size: 300%;
+    flex-grow: 2;
+    /*font-family:'Verdana'; */
+    font-size: 2rem;
     color: gold;
 }
 
 .nav-menu {
     display: flex;
-    font-family:'Verdana';
+    /*font-family:'Verdana';*/
     justify-content: space-between;
     flex-grow: 1;
 }
@@ -35,7 +36,7 @@
 
 .nav-menu li a {
     color: gold;
-    font-size: 150%;
+    font-size: 1.5rem;
     transition-duration: 0.2s;
 }
 
@@ -62,7 +63,7 @@
 
 .event {
     background-color: #CF9FFF;
-    font-family:'Verdana';
+    /*font-family:'Verdana'; */
     margin: 16px;
     padding: 16px;
 }
@@ -73,6 +74,10 @@
 
 .event1 {
     grid-area: event1;
+}
+
+.event1 img {
+    max-width: 100%;
 }
 
 .event2 {
@@ -111,6 +116,61 @@
     background-color: black;
 }
 
+.main-footer {
+    background-color: purple;
+    color: gold;
+}
+
+.text-sizes {
+    align-self: center;
+    justify-self: center;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 32px;
+
+    /*font-family: 'Verdana';*/
+}
+
+.main-footer h2 {
+    flex: 1 1 0;
+}
+
+.main-footer button {
+    height: 50px;
+    margin: 10px;
+    flex: 1 1 0;
+
+    /*font-family: 'Verdana';*/
+    text-align: center;
+    justify-content: center;
+    padding-top: 3px;
+
+}
+
+#small-text {
+    font-size: 12.8px; /* 12.8/16 = 0.8rem*/
+}
+
+#med-text {
+    font-size: 16px; /* 16/16 = 1rem */
+}
+
+#large-text {
+    font-size: 24px; /* 24/16 = 1.5rem */
+}
+
+body {
+    font-family:'Verdana', sans-serif;
+}
+
+body.serif-font {
+    font-family:'Courier New', Courier, monospace;
+}
 
 /* put hamburger stlying and other mobile like elements (when shrinking the screen)*/
 @media (max-width: 768px) { 
@@ -158,5 +218,29 @@
 
     .nav-menu.hide {
         display: none;
+    }
+}
+
+
+/* make a media query that when the breaking point of the image gets too big then make the width
+of the image smaller */
+
+
+@media (max-width: 1060px) {
+    .event1 img {
+        display: flex;
+        justify-content: center;
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        
+    }
+
+    .event1 {
+        display: flex;
+        flex-direction: column;
     }
 }
