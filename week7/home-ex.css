@@ -50,7 +50,14 @@
     color: lightpink;
 }
 
-/* class exmaple for event page */
+/* class exmaple for event page
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "event1 event2 event3";
+
+    margin: 20px; */
 .event-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -172,6 +179,13 @@ body.serif-font {
     font-family:'Verdana', Courier, monospace;
 }
 
+.responsive {
+    width: 100%;
+    max-width: 175px;
+    height: auto;
+    display: block;
+}
+
 /* put hamburger stlying and other mobile like elements (when shrinking the screen)*/
 @media (max-width: 768px) { 
     .nav-toggle {
@@ -218,6 +232,32 @@ body.serif-font {
 
     .nav-menu.hide {
         display: none;
+    }
+
+    .event-grid,
+    .event-grid2 {
+        grid-template-columns: 1fr;
+        gap: 20px; 
+    }
+
+    .event-grid {
+        grid-template-areas: 
+            "event1"
+            "event2"
+            "event3";
+    }
+
+    .event-grid2 {
+        grid-template-areas: 
+            "event4"
+            "event5";
+    }
+
+    .responsive {
+    width: 100%;
+    max-width: 175px;
+    height: auto;
+    display: block;
     }
 }
 
