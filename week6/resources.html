@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="home-ex.css">
     <title>Sigma Alpha Epsilon</title>
 </head>
-<body style="background-color: #EEE8AA;">
+<body>
+    <button id="fontToggle">Change Font Style</button>
     <nav class="main-nav">
         <div class="nav-brand">Sigma Alpha Epsilon</div>
         <button class="nav-toggle" aria-label="Toggle navigation menu">
@@ -43,29 +44,18 @@
         </div>
     </main>
 
-    <script>
-        const eventFilter4 = document.querySelector('.event4');
 
-        let filter_changed = false;
+    <footer class="main-footer">
+        <div class="text-sizes">
+            <h2>Text size:</h2>
+            <button id="small-text">Small</button>
+            <button id="med-text">Medium</button>
+            <button id="large-text">Large</button>
+            <button id="clear-preferences">Clear Preferences</button>
+        </div>
+    </footer>
 
-        function Filter(event) {
-            console.log('triggered');
-            if (event.key == "f") {
-                if (filter_changed == false) {
-                    eventFilter4.style.display = 'block';
-                    filter_changed = true;
-                }
-                else {
-                    eventFilter4.style.display = 'none';
-                    filter_changed = false;
-                }
-            }
-        }
-
-        addEventListener("keydown", (event) => {Filter(event)});
-
-
-    </script>
+    <script src="myfile.js"></script>
 
 
 </body>

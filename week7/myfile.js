@@ -13,6 +13,27 @@ const large_txt = document.querySelector('#large-text');
 const clear_txt_pref = document.querySelector('#clear-preferences');
 const font_toggle = document.querySelector('#fontToggle');
 
+/*const eventFilter4 = document.querySelector('.event4');
+
+let filter_changed = false;
+
+    function Filter(event) {
+        console.log('triggered');
+            if (event.key == "f") {
+                if (filter_changed == false) {
+                    eventFilter4.style.display = 'block';
+                    filter_changed = true;
+                }
+                else {
+                    eventFilter4.style.display = 'none';
+                    filter_changed = false;
+                }
+            }
+        }
+
+        addEventListener("keydown", (event) => {Filter(event)}); */
+
+
     function Filter(event) {
         console.log('triggered');
         if (event.key == "f") {

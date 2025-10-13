@@ -8,6 +8,7 @@
 </head>
 <body>
     <button id='theme' type='button'>DARK MODE</button>
+    <button id="fontToggle">Change Font Style</button>
     <nav class="main-nav">
         <div class="nav-brand">Sigma Alpha Epsilon</div>
         <button class="nav-toggle" aria-label="Toggle navigation menu">
@@ -44,54 +45,17 @@
         </div>
     </main>
 
-    <script>
-        const eventFilter4 = document.querySelector('.event4');
-        const btn = document.querySelector('#theme').addEventListener('click', theme);
+    <footer class="main-footer">
+        <div class="text-sizes">
+            <h2>Text size:</h2>
+            <button id="small-text">Small</button>
+            <button id="med-text">Medium</button>
+            <button id="large-text">Large</button>
+            <button id="clear-preferences">Clear Preferences</button>
+        </div>
+    </footer>
 
-        let filter_changed = false;
-
-        function Filter(event) {
-            console.log('triggered');
-            if (event.key == "f") {
-                if (filter_changed == false) {
-                    eventFilter4.style.display = 'block';
-                    filter_changed = true;
-                }
-                else {
-                    eventFilter4.style.display = 'none';
-                    filter_changed = false;
-                }
-            }
-        }
-
-        function theme() {
-            console.log('theme works');
-            const inTheme = document.body.className;
-            setTheme(inTheme);
-
-        }
-
-        function setTheme(theme) {
-            let inTheme = theme;
-            if (inTheme == 'dark') {
-                theme = 'light';
-            }
-            else {
-                theme = 'dark';
-            }
-            localStorage.setItem('userTheme', theme);
-            document.body.className = theme;
-        }
-
-        window.addEventListener('load', function() {
-            const savedTheme = localStorage.getItem('userTheme') || 'light';
-            document.body.className = savedTheme;
-        });
-
-        addEventListener("keydown", (event) => {Filter(event)});
-
-
-    </script>
+    <script src="myfile.js"></script>
 
 
 </body>
