@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading When Clicked</title>
+    <style>
+        /*.box {
+            height: 200px;
+            width: 200px;
+            border: 5px black solid;
+            background-color: red;
+            animation-name: moving-box;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+            position: relative;
+        } */
+
+        .buttonStyle {
+            width: 100px;
+            height: 50px;
+            border: 5px black solid;
+            background-color: lightblue;
+            margin: 20px;
+        }
+
+        .another-box {
+            height: 50px;
+            width: 50px;
+            border: 5px black solid;
+            background-color: white;
+            position: relative;
+        }
+
+        .animate {
+            animation-name: loading-box;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+        }
+        
+
+
+        @keyframes loading-box {
+            from {
+                width: 0px;
+                background-color: white;
+            }
+
+            25% {
+                width: 500px;
+            }
+
+
+            50% {
+                width: 750px;
+                background-color: yellow;
+            }
+
+            75% {
+                width: 850px;
+            }
+
+
+            to {
+                width: 1000px;
+                background-color: red;
+            }
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+    
+    </div?>
+    <h1>LOADING IN PROGESS:</h1>
+    <button class="buttonStyle" id="beginLoading">LOAD</button>
+    <div class="another-box" id="loadBox">
+
+    </div>
+
+
+
+    <script>
+        const button = document.getElementById('beginLoading');
+        const box = document.getElementById('loadBox');
+        
+        button.addEventListener('click', () => {
+            box.classList.toggle('animate');
+        });
+    </script>
+</body>
+</html>
