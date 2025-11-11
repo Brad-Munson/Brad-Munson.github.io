@@ -107,3 +107,14 @@ html {
       font-size: 18px;
     }
   }
+
+
+  for (i = 0; i<title.length; i++) {
+        if (title[i] == "") {
+            search_title = search_title + "+"
+            console.log('worked')
+        }
+        else {
+            search_title = search_title + title[i];
+        }
+    }
