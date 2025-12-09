@@ -8,13 +8,7 @@
 */
 
 
-
-html {
-            font-family:"Noto Serif", sans-serif;
-            font-weight: 450;
-            font-style: normal;
-        }
-
+/*
 h1 {
     font-family:"Noto Serif", sans-serif;
     font-weight: 900;
@@ -74,4 +68,181 @@ video {
     display: block;
     margin: auto;
     width: 640px;
+}
+    */
+
+/* ------------------------------
+   GENERAL STYLES
+------------------------------ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Serif", serif;
+    background-color: #f7f7f7;
+    color: #222;
+    
+}
+
+/* Centered container */
+section, header, footer {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: black;
+}
+
+.color-box {
+    background: linear-gradient(120deg, #AEA4BF, #8F6593);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+h3 {
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+a {
+    color: #8F6593;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #AEA4BF;
+    text-decoration: underline;
+}
+
+a:visited {
+    color:#8F6593;
+}
+
+img {
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.photoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.photoRow .photo {
+    width: 50%;          
+    max-width: 350px;    
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+
+video {
+    display: block;
+    margin: 30px auto;
+    width: 70%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    padding: 10px 0 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: black;
+    font-size: 0.95rem;
+}
+
+footer strong {
+    color: black;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px auto;
+    width: 85%;
+}
+
+
+@media (max-width: 560px) {
+
+    body {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    a {
+        margin: 0 6px;
+        font-size: 1rem;
+    }
+
+    .photoRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .photoRow .photo {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .video {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    img {
+        width: 100% ;
+        height: auto;
+        max-width: 100%;
+    }
+
+    section, header, footer {
+        width: 95%;
+    }
 }
