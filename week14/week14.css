@@ -7,73 +7,6 @@
 - dark purple/brown: 3B252C
 */
 
-
-/*
-h1 {
-    font-family:"Noto Serif", sans-serif;
-    font-weight: 900;
-    font-style: bold;
-    color:#3B252C;
-    vertical-align: center;
-}
-
-
-h2,h3 {
-    font-family:"Noto Serif", sans-serif;
-    font-weight: 900;
-    font-style: bold;
-    color:#3B252C;
-}
-
-p {
-    color: #3B252C;
-    padding: 5px;
-}
-
-a {
-    text-decoration: underline;
-    color: #3B252C 
-}
-
-a:hover {
-    text-decoration: underline;
-    color:#CDCDCD;
-}
-
-a:visited {
-    color:#8F6593;
-}
-
-#box3 {
-            background-color: #AEA4BF;
-        }
-
-.color-box {
-    height: 50px;
-    width: 100%;
-}
-
-.myname {
-    color:#8F6593;
-    font-family: 'Verdana', sans-serif;
-}
-
-img {
-    display: block;
-    margin:auto;
-    width: 50%;
-}
-
-video {
-    display: block;
-    margin: auto;
-    width: 640px;
-}
-    */
-
-/* ------------------------------
-   GENERAL STYLES
------------------------------- */
 body {
     margin: 0;
     padding: 0;
@@ -83,16 +16,12 @@ body {
     
 }
 
-/* Centered container */
 section, header, footer {
     width: 80%;
     max-width: 900px;
     margin: auto;
 }
 
-/* ------------------------------
-   HEADER
------------------------------- */
 header {
     padding: 30px 0 10px;
     text-align: center;
@@ -163,7 +92,6 @@ img {
     border-radius: 12px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
-
 
 video {
     display: block;
